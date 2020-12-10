@@ -26,7 +26,7 @@ SECRET_KEY = '@^$scjyur(k4f3bd%#s71heu^18y*87w(5)3=ru7r2iib4^6^i'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
-
+LOGIN_URL = '/login'
 
 # Application definition
 
@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tweets'
+    #internal
+    'tweets',
+    #third party
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
