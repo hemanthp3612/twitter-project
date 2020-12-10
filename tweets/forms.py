@@ -11,5 +11,5 @@ class TweetForm(forms.ModelForm):
         MAX_TWEET_LENGTH = 240
         content = self.cleaned_data.get("content")
         if len(content) > MAX_TWEET_LENGTH:
-            raise forms.validationError("This tweet is too long")
+            raise forms.ValidationError("This tweet is too long")
         return content
